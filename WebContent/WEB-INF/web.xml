@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>bookstore</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <filter>
+   <filter-name>EncodingFilter</filter-name>
+   <filter-class>rjxy.kcsj.klz.servlet.filter.EncodingFilter</filter-class>
+      <init-param>
+        <param-name>charset</param-name>
+        <param-value>UTF-8</param-value>
+      </init-param>
+ </filter>
+
+ <filter-mapping>
+   <filter-name>EncodingFilter</filter-name>
+   <url-pattern>/*</url-pattern>
+ </filter-mapping>
+
+<servlet>
+     <servlet-name>AdminLoginServlet</servlet-name>
+     <servlet-class>rjxy.kcsj.klz.servlet.LoginServlet.AdminLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>AdminLoginServlet</servlet-name>
+     <url-pattern>/AdminLogin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+     <servlet-name>UserLoginServlet</servlet-name>
+     <servlet-class>rjxy.kcsj.klz.servlet.LoginServlet.UserLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>UserLoginServlet</servlet-name>
+     <url-pattern>/UserLogin</url-pattern>
+  </servlet-mapping>
+   <servlet>
+     <servlet-name>UserCreate</servlet-name>
+     <servlet-class>rjxy.kcsj.klz.servlet.Create.UserCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>UserCreate</servlet-name>
+     <url-pattern>/UserCreate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+     <servlet-name>UserInsert</servlet-name>
+     <servlet-class>rjxy.kcsj.klz.servlet.UserCRUD.UserInsert</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>UserInsert</servlet-name>
+     <url-pattern>/UserInsert</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+     <servlet>
+     <servlet-name>UserDelete</servlet-name>
+     <servlet-class>rjxy.kcsj.klz.servlet.UserCRUD.UserDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>UserDelete</servlet-name>
+     <url-pattern>/UserDelete</url-pattern>
+  </servlet-mapping>
+  
+  
+     <servlet>
+     <servlet-name>UserFind</servlet-name>
+     <servlet-class>rjxy.kcsj.klz.servlet.UserCRUD.UserFind</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>UserFind</servlet-name>
+     <url-pattern>/UserFind</url-pattern>
+  </servlet-mapping>
+  
+  
+     <servlet>
+     <servlet-name>UserModify</servlet-name>
+     <servlet-class>rjxy.kcsj.klz.servlet.UserCRUD.UserModify</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>UserModify</servlet-name>
+     <url-pattern>/UserModify</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+     <servlet-name>FindAllUser</servlet-name>
+     <servlet-class>rjxy.kcsj.klz.servlet.UserCRUD.FindAllUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>FindAllUser</servlet-name>
+     <url-pattern>/FindAllUser</url-pattern>
+  </servlet-mapping> 
+  
+  
+  
+  
+</web-app>
